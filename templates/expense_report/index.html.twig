@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle note de frais{% endblock %}
+
+{% block body %}
+    <div class="container" style="max-width: 1100px; margin: 40px auto;">
+        <h1>Nouvelle note de frais</h1>
+
+        {{ form_start(form) }}
+
+            <h2>Informations générales</h2>
+            {{ form_row(form.requesterName) }}
+            {{ form_row(form.requestDate) }}
+            {{ form_row(form.expenseReason) }}
+            {{ form_row(form.budget) }}
+            {{ form_row(form.mileageRate) }}
+
+            <h2>Lignes de frais</h2>
+            <div id="expense-lines">
+                {{ form_row(form.lines) }}
+            </div>
+
+            <h2>Abandon / remboursement</h2>
+            {{ form_row(form.donationAmount) }}
+            {{ form_row(form.iban) }}
+            {{ form_row(form.bic) }}
+            {{ form_row(form.signatureName) }}
+
+            <h2>Justificatifs</h2>
+            {{ form_row(form.supportingDocuments) }}
+
+            <button type="submit">Envoyer la note de frais</button>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
