@@ -18,3 +18,14 @@
 /public/assets/
 /assets/vendor/
 ###< symfony/asset-mapper ###
+
+###> uploads ###
+# Justificatifs envoyés par les utilisateurs : données personnelles
+/public/uploads/
+###< uploads ###
+
+###> système ###
+.DS_Store
+.idea/
+.vscode/
+###< système ###
